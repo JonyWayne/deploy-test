@@ -1,6 +1,6 @@
 import React, { useEffect, useState, FC } from "react";
 import { useInView } from "react-intersection-observer";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import { Posts } from "../../posts/ui/posts";
 
@@ -19,7 +19,7 @@ export const Main: FC = () => {
   return (
     <Routes>
       <Route
-        path="/"
+        path="*"
         element={
           <Posts
             data={data}
